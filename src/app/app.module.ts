@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+// added something
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
