@@ -1,0 +1,12 @@
+<div class="list">
+  <div class="list__title">
+    <h1>Pokedex</h1>
+  </div>
+  <div class="list__container">
+    <input type="text" class="input">
+    <div class="list__container__items">
+      <app-pokemon-item *ngFor="let item of items; let i=index" [pokemon]="i"></app-pokemon-item>
+    </div>
+  </div>
+</div>
+
