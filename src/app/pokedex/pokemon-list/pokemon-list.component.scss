@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 .list{
-    border: solid 1px black;
     padding: 40px;
     height: 600px;
     &__title{
@@ -10,10 +9,16 @@
         border-radius: 20px;
         padding: 10px;
         margin-bottom: 10px;
+        display: flex;
+        flex-flow: row nowrap;
+        &__img{
+            height: 50px;
+        }
         h1{
             font-size: 50px;
             font-family: 'Roboto Condensed';
             color: white;
+            margin-left: 20px;
         }
     }
     &__container{
