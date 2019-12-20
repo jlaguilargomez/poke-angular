@@ -32,7 +32,11 @@ export class PokedexService {
               item.moves[Math.floor(Math.random()*item.moves.length)].move.name
             ],
             ability: item.abilities.map(ability => ability.ability.name),
-            imagePath: item.sprites.front_default
+            imagePath: item.sprites.front_default,
+            coord : {
+              lat: Math.random()*0.3+40.261781,
+              long : Math.random()*0.4+(-3.932230)
+            }
           }
           resolve(newPokemon)
         })

@@ -8,4 +8,5 @@ export interface Pokemon{
     moves : string[];
     ability : string[];
     imagePath : string;
+    coord : {lat : number , long : number}
 }
