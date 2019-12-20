@@ -3,10 +3,13 @@
     <h1>Pokedex</h1>
   </div>
   <div class="list__container">
-    <input type="text" class="input">
+    <form class="form">
+      <img src="./assets/img/glass-search.png" class="form__img">
+      <input type="text" class="form__input" placeholder="Search">
+    </form>
     <div class="list__container__items">
-      <app-pokemon-item *ngFor="let item of items; let i=index" [pokemon]="i"></app-pokemon-item>
+      <app-pokemon-item *ngFor="let item of items; let i=index" [pokemon]=i></app-pokemon-item>
     </div>
-  </div>
+  <div>
 </div>
 

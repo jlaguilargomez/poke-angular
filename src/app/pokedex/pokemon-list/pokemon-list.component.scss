@@ -6,27 +6,45 @@
     padding: 40px;
     height: 600px;
     &__title{
-        border: solid 1px black;
+        background-color: #555;
         border-radius: 20px;
         padding: 10px;
         margin-bottom: 10px;
         h1{
             font-size: 50px;
+            font-family: 'Roboto Condensed';
+            color: white;
         }
     }
     &__container{
-        border: solid 1px black;
+        background-color: #f0f0f0;
         border-radius: 20px 20px 60px 20px;
         padding: 15px;
         height: 425px;
         &__items{
-            border: solid 1px gray;
-            height: 50vh;
+            height: 310px;
             overflow-y: scroll;
+            line-height: 30px;
         }
     }
-    .input{
-        width: 100%;
+    .form{
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 5px;
         margin-bottom: 20px;
+        display: flex;
+        flex-flow: row nowrap;
+        &__img{
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+        }
+        &__input{
+            border: none;
+            outline: none;
+            background-color: none;
+            width: 80%;
+            margin-left: 20px;
+        }
     }
 }
