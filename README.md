@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Reset.scss and mediaQueries.scss added
 - Husky added in our repo
 - Main service `pokedex.service` added to fetch the list of the pokemon from the poke-api and give it to the pokedex component
-
+- Installed some new features to develop CI/CD 
 
 - Figma design! https://www.figma.com/file/Pj6OX5iNLfU08yPPDtnhYH/pokedex?node-id=0%3A1
 
