@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { PokedexService } from '../pokedex.service';
+import { Observable } from 'rxjs';
 import { Pokemon } from '../interface/pokemon.interface';
 
 @Component({
@@ -10,6 +11,8 @@ import { Pokemon } from '../interface/pokemon.interface';
 })
 export class PokedexComponent implements OnInit {
   pokemons : Pokemon[];
+  pokemonObservable: Observable<Pokemon[]>;
+
   constructor(private pokedexService : PokedexService) { }
 
   renderPokemon(pok) {
@@ -17,10 +20,13 @@ export class PokedexComponent implements OnInit {
   }
 
   ngOnInit() {
-    Promise.all(this.pokedexService.getPokemons(151)).then((dataSet :Pokemon [] )=>{
-      this.pokemons = dataSet;
-      console.log(this.pokemons);
-    });
+    this.pokemonObservable = Observable.create( observer => {
+      Promise.all(this.pokedexService.getPokemons(151)).then((dataSet :Pokemon [] )=>{
+        this.pokemons = dataSet
+        observer.next(this.pokemons)
+      });
+    })
+    
   }
 
 }
