@@ -1,0 +1,35 @@
+@import '../../reset.scss';
+
+.header{
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    background-color: #DB4545;
+    display: flex;
+    justify-content: flex-end;
+
+    &__logo{
+        object-fit: contain;
+        background-color: #DB4545;
+        justify-self: self-start;
+    }
+    
+    &__buttonGroup{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        
+        &__link{
+            border: 0.5px solid rgba(0, 0, 0, 0.17);
+            text-decoration: none;
+            color: white;
+            font-family: 'Roboto Condensed';
+            font-size: 18px;
+            line-height: 30px;
+            padding: 3px;
+            &:hover{
+            background-color: #B53E3E;
+            }
+        }
+    }
+}

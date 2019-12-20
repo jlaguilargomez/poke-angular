@@ -10,6 +10,7 @@ import { PokemonDetailComponent } from './pokedex/pokemon-detail/pokemon-detail.
 import { PokemonItemComponent } from './pokedex/pokemon-list/pokemon-item/pokemon-item.component';
 import { PokemonCardComponent } from './pokedex/pokemon-detail/pokemon-card/pokemon-card.component';
 import { PokemonMapComponent } from './pokedex/pokemon-detail/pokemon-map/pokemon-map.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PokemonMapComponent } from './pokedex/pokemon-detail/pokemon-map/pokemo
     PokemonDetailComponent,
     PokemonItemComponent,
     PokemonCardComponent,
-    PokemonMapComponent
+    PokemonMapComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
