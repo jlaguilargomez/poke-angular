@@ -63,6 +63,10 @@ export class PokemonMapComponent implements OnInit {
         marker.on('mouseover', function(event) {
           marker.openPopup();
         });
+        marker.on('click', function(event) {
+          // Extact the pokemon number using the imagePath
+          console.log(event.target._icon.src.match(/\d+/)[0]);
+        });
         marker.on('mouseout', function(event) {
           marker.closePopup();
         });
