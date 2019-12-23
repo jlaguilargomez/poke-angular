@@ -1,14 +1,9 @@
-
 <div class="row">
-<<<<<<< HEAD
-    <app-pokemon-list class="column"></app-pokemon-list>
-    <app-pokemon-detail class="column"  [pokemonObservable]="pokemonObservable"></app-pokemon-detail>
-=======
-    <app-pokemon-list class="column-list"></app-pokemon-list>
-    <app-pokemon-detail class="column-detail"></app-pokemon-detail>
->>>>>>> e97e71a011cb319cdc69cd0fe98a0e191bca5efb
+  <app-pokemon-list class="column-list"></app-pokemon-list>
+  <app-pokemon-detail
+    class="column-detail"
+    [pokemonObservable]="pokemonObservable"
+  ></app-pokemon-detail>
 </div>
 
 <p (click)="renderPokemon(3)">pokedex works!</p>
-
-
