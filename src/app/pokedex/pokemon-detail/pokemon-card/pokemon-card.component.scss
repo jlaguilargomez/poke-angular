@@ -1,0 +1,87 @@
+//Variables
+$radius: 2em;
+
+//Shadow
+.shadow {
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 0.37);
+  border-radius: 2em;
+  margin-bottom: 2em;
+}
+
+//Containers
+.container {
+  border-radius: $radius;
+  background-color: #6fad6e;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-info {
+  border-radius: $radius;
+  display: flex;
+  flex-direction: column;
+  background-color: #ececec;
+  width: 60%;
+  padding: 1em 0 2em 3em;
+
+  h1 {
+    font-size: 3em; //Pending general styles
+    font-weight: bold; ////Pending general styles
+  }
+  ul {
+    margin: 0.5em 0;
+    li:last-child {
+      margin-bottom: 0; //Eliminate margin to proper vertical align
+    }
+  }
+
+  ul:last-child {
+    margin-bottom: 0; //Eliminate margin to proper vertical align
+  }
+  li {
+    margin: 0.5em;
+  }
+}
+
+.container-photo {
+  padding: 1em 0 2em 0em;
+
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    //background-color: white;
+    border-radius: 1.5em;
+    width: 10em; //Size img, pending mediaquerys
+  }
+
+  h2 {
+    color: white;
+    font-weight: bolder;
+    margin: 0.3em 0;
+    font-size: 2em;
+  }
+}
+
+.container-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+//Div Background White
+.background-photo {
+  background-color: white;
+  border-radius: 2em;
+  padding: -50px;
+}
+
+//btn classes
+.btn {
+  background-color: white;
+  padding: 0.3em;
+  border-radius: 0.3em;
+}
