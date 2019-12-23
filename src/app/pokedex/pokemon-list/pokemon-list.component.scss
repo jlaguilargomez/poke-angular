@@ -7,7 +7,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  border: 1px solid red;
 }
 
 .logo {
@@ -36,33 +35,33 @@
 
 .list-container {
   width: $box-sizes;
-  min-height: fit-content;
+  max-height: 70vh;
   background-color: #f0f0f0;
   border-radius: 10px 10px 60px 10px;
   padding: 15px;
-  height: 425px;
+  overflow-y: scroll;
+}
 
-  ::-webkit-scrollbar {
-    width: 15px;
-  }
+::-webkit-scrollbar {
+  width: 15px;
+}
 
-  ::-webkit-scrollbar-track {
-    background: #c4c4c4;
-    border-radius: 20px;
-    box-shadow: inset 0 0 2px 2px rgb(151, 151, 151);
-  }
+::-webkit-scrollbar-track {
+  background: #c4c4c4;
+  border-radius: 20px;
+  box-shadow: inset 0 0 2px 2px rgb(151, 151, 151);
+}
 
-  ::-webkit-scrollbar-thumb {
-    background: #f9f9f9;
-    border-radius: 7px;
-    border: 1px solid #807d7d;
-    width: 1px;
-    height: 30px;
-  }
+::-webkit-scrollbar-thumb {
+  background: #f9f9f9;
+  border-radius: 7px;
+  border: 1px solid #807d7d;
+  width: 1px;
+  height: 30px;
+}
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: $secondary-color;
-  }
+::-webkit-scrollbar-thumb:hover {
+  background: $secondary-color;
 }
 
 .search-bar {
@@ -94,5 +93,35 @@
   overflow-y: scroll;
   line-height: 30px;
   &__item {
+  }
+}
+
+.list-elem {
+  display: flex;
+  flex-direction: row;
+  padding: 6px;
+  height: 50px;
+  width: 100%;
+  color: white;
+
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color;
+    width: 10%;
+    border-top-left-radius: 20px;
+    font-size: 0.8rem;
+  }
+
+  &__name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $primary-color;
+    width: 90%;
+    border-bottom-right-radius: 20px;
+    text-transform: uppercase;
+    padding-left: 20px;
   }
 }
