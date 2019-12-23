@@ -1,11 +1,27 @@
 @import '../../commonStyles.scss';
 
-.component-box {
+.footer {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   background-color: $secondary-color;
   color: white;
-  height: 7vh;
-  //   position: fixed;
-  //   bottom:0;
+  height: 30px;
+  padding: 5px;
+
+  img {
+    max-height: 25px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .footer {
+    &__decorator {
+      &--secondary {
+        display: none;
+      }
+    }
+  }
 }
