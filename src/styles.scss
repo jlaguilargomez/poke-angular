@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import './reset.scss';
-//@import './assets/img/glass-search.png';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
-body{
-    background-color: #d4d4d4;
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #d4d4d4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
