@@ -25,7 +25,6 @@ export class PokedexComponent implements OnInit {
         (dataSet: Pokemon[]) => {
           this.pokemons = dataSet;
           observer.next(this.pokemons);
-          console.log(this.pokemons);
         }
       );
     });
