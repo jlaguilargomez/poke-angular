@@ -8,17 +8,23 @@
     <h1 class="box-title__title">Pokedex</h1>
   </header>
 
-  <section class="list-container">
+  <section *ngIf="pokemonList != undefined" class="list-container">
     <form class="search-bar">
       <img src="./assets/img/glass-search.png" class="search-bar__img" />
       <input class="search-bar__input" type="text" placeholder="Search" />
     </form>
-    <div class="list">
-      <app-pokemon-item
-        class="list__item"
-        *ngFor="let item of items; let i = index"
-        [pokemon]="i"
-      ></app-pokemon-item>
+    <div
+      class="list-elem"
+      (click)="renderPokemon(i)"
+      *ngFor="let elem of pokemonList; index as i"
+    >
+      <span class="list-elem__id">{{ elem.id }}</span>
+      <img
+        class="list-elem__img"
+        src="{{ elem.imagePath }}"
+        alt="pokemon-img"
+      />
+      <p class="list-elem__name">{{ elem.name }}</p>
     </div>
   </section>
 </main>
