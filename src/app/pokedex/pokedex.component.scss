@@ -1,25 +1,17 @@
-.row {
+@import '../../commonStyles.scss';
+
+.component-box {
   display: flex;
-  flex-flow: wrap row;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100vw;
+  height: calc(100vh-120px);
 }
 
-.column-list {
-  width: 45%;
+app-pokemon-list {
+  width: 50%;
 }
 
-.column-detail {
-  width: 55%;
-}
-
-@media only screen and (max-width: 480px) {
-}
-
-@media only screen and (max-width: 768px) {
-  .row {
-    flex-flow: column nowrap;
-  }
-  .column-list,
-  .column-detail {
-    width: 100%;
-  }
+app-pokemon-detail {
+  width: 50%;
 }
