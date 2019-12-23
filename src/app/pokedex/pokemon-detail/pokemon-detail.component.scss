@@ -1,4 +1,6 @@
-.container-detail{
-    border: solid 1px black;
-    padding: 40px;
+.component-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
