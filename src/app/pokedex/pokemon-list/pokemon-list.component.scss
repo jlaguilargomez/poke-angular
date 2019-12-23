@@ -36,18 +36,14 @@
 
 .list-container {
   width: $box-sizes;
-  height: 200%;
-
+  min-height: fit-content;
   background-color: #f0f0f0;
-  border-radius: 20px 20px 60px 20px;
+  border-radius: 10px 10px 60px 10px;
   padding: 15px;
   height: 425px;
 
   ::-webkit-scrollbar {
     width: 15px;
-  }
-
-  ::-webkit-scrollbar-button {
   }
 
   ::-webkit-scrollbar-track {
