@@ -11,6 +11,7 @@ import { PokemonItemComponent } from './pokedex/pokemon-list/pokemon-item/pokemo
 import { PokemonCardComponent } from './pokedex/pokemon-detail/pokemon-card/pokemon-card.component';
 import { PokemonMapComponent } from './pokedex/pokemon-detail/pokemon-map/pokemon-map.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,11 @@ import { HeaderComponent } from './header/header.component';
     PokemonItemComponent,
     PokemonCardComponent,
     PokemonMapComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent,
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

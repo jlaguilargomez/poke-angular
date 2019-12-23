@@ -1,0 +1,11 @@
+@import '../../commonStyles.scss';
+
+.component-box {
+  display: flex;
+  width: 100%;
+  background-color: $secondary-color;
+  color: white;
+  height: 7vh;
+  //   position: fixed;
+  //   bottom:0;
+}
