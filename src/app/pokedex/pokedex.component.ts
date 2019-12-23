@@ -7,26 +7,26 @@ import { Pokemon } from '../interface/pokemon.interface';
 @Component({
   selector: 'app-pokedex',
   templateUrl: './pokedex.component.html',
-  styleUrls: ['./pokedex.component.scss']
+  styleUrls: ['./pokedex.component.scss'],
 })
 export class PokedexComponent implements OnInit {
-  pokemons : Pokemon[];
+  pokemons: Pokemon[];
   pokemonObservable: Observable<Pokemon[]>;
 
-  constructor(private pokedexService : PokedexService) { }
+  constructor(private pokedexService: PokedexService) {}
 
   renderPokemon(pok) {
     console.log(this.pokemons[pok]);
   }
 
   ngOnInit() {
-    this.pokemonObservable = Observable.create( observer => {
-      Promise.all(this.pokedexService.getPokemons(151)).then((dataSet :Pokemon [] )=>{
-        this.pokemons = dataSet
-        observer.next(this.pokemons)
-      });
-    })
-    
+    this.pokemonObservable = Observable.create(observer => {
+      Promise.all(this.pokedexService.getPokemons(151)).then(
+        (dataSet: Pokemon[]) => {
+          this.pokemons = dataSet;
+          observer.next(this.pokemons);
+        }
+      );
+    });
   }
-
 }
