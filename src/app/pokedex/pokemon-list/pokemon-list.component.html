@@ -1,16 +1,24 @@
-<div class="list">
-  <div class="list__title">
-    <img src="./assets/img/pokeball-logo.png" alt="" class="list__title__img">
-    <h1>Pokedex</h1>
-  </div>
-  <div class="list__container">
-    <form class="form">
-      <img src="./assets/img/glass-search.png" class="form__img">
-      <input type="text" class="form__input" placeholder="Search">
-    </form>
-    <div class="list__container__items">
-      <app-pokemon-item *ngFor="let item of items; let i=index" [pokemon]=i></app-pokemon-item>
-    </div>
-  <div>
-</div>
+<main class="component-box">
+  <header class="box-title">
+    <img
+      class="logo"
+      src="./assets/img/pokeball-logo.png"
+      alt="pokeball-logo"
+    />
+    <h1 class="box-title__title">Pokedex</h1>
+  </header>
 
+  <section class="list-container">
+    <form class="search-bar">
+      <img src="./assets/img/glass-search.png" class="search-bar__img" />
+      <input class="search-bar__input" type="text" placeholder="Search" />
+    </form>
+    <div class="list">
+      <app-pokemon-item
+        class="list__item"
+        *ngFor="let item of items; let i = index"
+        [pokemon]="i"
+      ></app-pokemon-item>
+    </div>
+  </section>
+</main>
