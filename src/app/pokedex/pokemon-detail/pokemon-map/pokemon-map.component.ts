@@ -4,28 +4,47 @@ import * as L from 'leaflet';
 @Component({
   selector: 'app-pokemon-map',
   templateUrl: './pokemon-map.component.html',
-  styleUrls: ['./pokemon-map.component.scss']
+  styleUrls: ['./pokemon-map.component.scss'],
 })
 export class PokemonMapComponent implements OnInit {
-
   @Input() pokemonObservable;
 
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     // Leaflet setting
-    let options = {attributionControl: false};
-    let map = L.map('map', options).setView([40.416775, -3.703790], 13);
-    let tileLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'});
-    tileLayer.addTo(map)
+    let options = { attributionControl: false };
+    let map = L.map('map', options).setView([40.416775, -3.70379], 13);
+    let tileLayer = L.tileLayer(
+      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+      {
+        attribution:
+          'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+      }
+    );
+    tileLayer.addTo(map);
 
-    this.pokemonObservable.subscribe(pokemons =>{
-      pokemons.forEach( pokemon => {
-        let marker = L.marker([pokemon.coord.lat, pokemon.coord.long],{icon: L.icon({iconUrl: pokemon.imagePath, iconSize :70})})
-        marker.addTo(map)
-      })
-    })
+    this.pokemonObservable.subscribe(pokemons => {
+      console.log(pokemons);
+      pokemons.forEach(pokemon => {
+        let pokemonIcon = L.icon({
+          iconUrl: pokemon.imagePath,
+          iconSize: 70,
+          shadowUrl: '../../../assets/img/iconShadow.png',
+          shadowSize: 70,
+          popupAnchor: [0, -35],
+        });
+        let marker = L.marker([pokemon.coord.lat, pokemon.coord.long], {
+          icon: pokemonIcon,
+        }).bindPopup(pokemon.name, { closeButton: false });
+        marker.on('mouseover', function(event) {
+          marker.openPopup();
+        });
+        marker.on('mouseout', function(event) {
+          marker.closePopup();
+        });
+        marker.addTo(map);
+      });
+    });
   }
-
 }
