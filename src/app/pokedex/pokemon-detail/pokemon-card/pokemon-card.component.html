@@ -4,12 +4,12 @@
       <div class="background-photo">
         <img
           class="sprite"
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/132.png"
+          src="{{ pokemonSelected.imagePath }}"
           alt="sprite"
         />
       </div>
 
-      <h2>Ditto</h2>
+      <h2>{{ pokemonSelected.name }}</h2>
       <div class="container container--row">
         <div class="type type--normal">Grass</div>
         <div class="type type--poison">Poison</div>
@@ -17,17 +17,18 @@
     </div>
 
     <div class="container container--info">
-      <h1>#5 Ditto</h1>
+      <h1>#{{ pokemonSelected.name }}</h1>
       <ul>
-        <li>Ability: overgrow</li>
-        <li>Height: 1231231</li>
-        <li>Weight: 233223</li>
+        <!-- Ability has to be iterated-->
+        <li>Ability: {{ pokemonSelected.ability[0] }}</li>
+        <li>Height: {{ pokemonSelected.height }}</li>
+        <li>Weight: {{ pokemonSelected.weight }}</li>
       </ul>
 
       <table>
         <tr>
-          <td>HP</td>
-          <td>50</td>
+          <td>{{ pokemonSelected.stats[0].name }}</td>
+          <td>{{ pokemonSelected.stats[0].base }}</td>
           <div class="progress-bar">
             <div class="progress-bar__skill--hp">
               <div class="d-hidden">Skill</div>
@@ -35,8 +36,8 @@
           </div>
         </tr>
         <tr>
-          <td>Attack</td>
-          <td>66</td>
+          <td>{{ pokemonSelected.stats[1].name }}</td>
+          <td>{{ pokemonSelected.stats[1].base }}</td>
           <div class="progress-bar">
             <div class="progress-bar__skill--attack">
               <div class="d-hidden">Skill</div>
@@ -44,8 +45,8 @@
           </div>
         </tr>
         <tr>
-          <td>S.Attack</td>
-          <td>44</td>
+          <td>{{ pokemonSelected.stats[2].name }}</td>
+          <td>{{ pokemonSelected.stats[2].base }}</td>
           <div class="progress-bar">
             <div class="progress-bar__skill--sattack">
               <div class="d-hidden">Skill</div>
@@ -53,8 +54,8 @@
           </div>
         </tr>
         <tr>
-          <td>S.Deffense</td>
-          <td>84</td>
+          <td>{{ pokemonSelected.stats[3].name }}</td>
+          <td>{{ pokemonSelected.stats[3].base }}</td>
           <div class="progress-bar">
             <div class="progress-bar__skill--sdeffense">
               <div class="d-hidden">Skill</div>
@@ -62,8 +63,8 @@
           </div>
         </tr>
         <tr>
-          <td>Speed</td>
-          <td>66</td>
+          <td>{{ pokemonSelected.stats[4].name }}</td>
+          <td>{{ pokemonSelected.stats[4].base }}</td>
           <div class="progress-bar">
             <div class="progress-bar__skill--speed">
               <div class="d-hidden">Skill</div>
