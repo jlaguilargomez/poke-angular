@@ -20,24 +20,24 @@ export class PokemonCardComponent implements OnInit {
         // We have to change the objet name 'base-state' to a base.
         {
           name: 'hp',
-          base: 100,
+          base: 92,
         },
         {
           name: 'speed',
-          base: 45,
+          base: 35,
         },
         {
           name: 'special-defense',
-          base: 65,
+          base: 25,
         },
         {
           name: 'defense',
-          base: 49,
+          base: 40,
         },
 
         {
           name: 'special-attack',
-          base: 50,
+          base: 77,
         },
       ],
       imagePath:
@@ -46,4 +46,36 @@ export class PokemonCardComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  colorBar(num) {
+    switch (true) {
+      case num < 10:
+        return '#d6522a';
+
+      case num >= 10 && num < 20:
+        return '#d6822a';
+
+      case num >= 20 && num < 30:
+        return '#d6b12a';
+
+      case num >= 30 && num < 40:
+        return '#c0c42a';
+
+      case num >= 40 && num <= 50:
+        return '#aad62a';
+      case num >= 50 && num <= 60:
+        return '#99d62b';
+      case num >= 60 && num <= 70:
+        return '#87d52c';
+      case num >= 70 && num <= 80:
+        return '#62d52d';
+      case num >= 80 && num <= 90:
+        return '#34d52e';
+      case num >= 90 && num <= 100:
+        return '#30d55d';
+
+      default:
+        return 'grey';
+    }
+  }
 }
