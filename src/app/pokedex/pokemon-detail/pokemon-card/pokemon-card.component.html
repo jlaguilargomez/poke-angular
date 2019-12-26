@@ -30,7 +30,10 @@
           <td>{{ pokemonSelected.stats[0].name }}</td>
           <td>{{ pokemonSelected.stats[0].base }}</td>
           <div class="progress-bar">
-            <div class="progress-bar__skill--hp">
+            <div
+              [style.width.%]="pokemonSelected.stats[0].base"
+              class="progress-bar__skill--hp"
+            >
               <div class="d-hidden">Skill</div>
             </div>
           </div>
@@ -39,7 +42,10 @@
           <td>{{ pokemonSelected.stats[1].name }}</td>
           <td>{{ pokemonSelected.stats[1].base }}</td>
           <div class="progress-bar">
-            <div class="progress-bar__skill--attack">
+            <div
+              [style.width.%]="pokemonSelected.stats[1].base"
+              class="progress-bar__skill--attack"
+            >
               <div class="d-hidden">Skill</div>
             </div>
           </div>
@@ -48,7 +54,10 @@
           <td>{{ pokemonSelected.stats[2].name }}</td>
           <td>{{ pokemonSelected.stats[2].base }}</td>
           <div class="progress-bar">
-            <div class="progress-bar__skill--sattack">
+            <div
+              [style.width.%]="pokemonSelected.stats[2].base"
+              class="progress-bar__skill--sattack"
+            >
               <div class="d-hidden">Skill</div>
             </div>
           </div>
@@ -57,7 +66,10 @@
           <td>{{ pokemonSelected.stats[3].name }}</td>
           <td>{{ pokemonSelected.stats[3].base }}</td>
           <div class="progress-bar">
-            <div class="progress-bar__skill--sdeffense">
+            <div
+              [style.width.%]="pokemonSelected.stats[3].base"
+              class="progress-bar__skill--sdeffense"
+            >
               <div class="d-hidden">Skill</div>
             </div>
           </div>
@@ -66,7 +78,10 @@
           <td>{{ pokemonSelected.stats[4].name }}</td>
           <td>{{ pokemonSelected.stats[4].base }}</td>
           <div class="progress-bar">
-            <div class="progress-bar__skill--speed">
+            <div
+              [style.width.%]="pokemonSelected.stats[4].base"
+              class="progress-bar__skill--speed"
+            >
               <div class="d-hidden">Skill</div>
             </div>
           </div>

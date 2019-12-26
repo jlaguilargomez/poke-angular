@@ -20,7 +20,7 @@ export class PokemonCardComponent implements OnInit {
         // We have to change the objet name 'base-state' to a base.
         {
           name: 'hp',
-          base: 65,
+          base: 100,
         },
         {
           name: 'speed',
@@ -37,7 +37,7 @@ export class PokemonCardComponent implements OnInit {
 
         {
           name: 'special-attack',
-          base: 45,
+          base: 50,
         },
       ],
       imagePath:
